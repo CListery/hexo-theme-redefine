@@ -24,6 +24,10 @@ export default function initTyped(id) {
     usrShowCursor,
   } = config;
 
+  if (!theme.home_banner.subtitle.typed) {
+    return
+  }
+
   function typing(dataList) {
     const st = new Typed("#" + id, {
       strings: [dataList],
