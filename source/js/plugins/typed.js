@@ -9,6 +9,7 @@ export const config = {
   usrLoop: theme.home_banner.subtitle.loop,
   usrSmartBackspace: theme.home_banner.subtitle.smart_backspace,
   usrHitokotoAPI: theme.home_banner.subtitle.hitokoto.api,
+  usrShowCursor: theme.home_banner.subtitle.show_cursor,
 };
 
 export default function initTyped(id) {
@@ -20,6 +21,7 @@ export default function initTyped(id) {
     usrLoop,
     usrSmartBackspace,
     usrHitokotoAPI,
+    usrShowCursor,
   } = config;
 
   function typing(dataList) {
@@ -31,6 +33,7 @@ export default function initTyped(id) {
       backDelay: usrBackDelay || 1500,
       loop: usrLoop || false,
       startDelay: usrStartDelay || 500,
+      showCursor: usrShowCursor || false,
     });
   }
 
@@ -52,6 +55,7 @@ export default function initTyped(id) {
         backDelay: usrBackDelay || 1500,
         loop: usrLoop || false,
         startDelay: usrStartDelay || 500,
+        showCursor: usrShowCursor || false,
       });
     }
   }
